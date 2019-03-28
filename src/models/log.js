@@ -7,6 +7,7 @@ const Log = mongoose.model('Log', {
     },
     date: {
         type: Date,
+        index: true,
         default: Date.now
     }
 });
