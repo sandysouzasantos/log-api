@@ -63,13 +63,4 @@ router.get('/log', async (req, res, next) => {
 
 });
 
-router.get('/', async (req, res, next) => {
-    try {
-        const logs = await Log.find({});
-        res.send(logs);
-    } catch (e) {
-        res.status(500).send();
-    }
-});
-
 module.exports = router;

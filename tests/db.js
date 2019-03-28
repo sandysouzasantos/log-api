@@ -33,7 +33,7 @@ const logFive = {
     date: moment(new Date())
 };
 
-const setUpDataBase = async () => {
+const setUpDatabase = async () => {
     await Log.deleteMany();
     await new Log(logOne).save();
     await new Log(logTwo).save();
@@ -48,5 +48,5 @@ module.exports = {
     logThree,
     logFour,
     logFive,
-    setUpDataBase
+    setUpDatabase
 };
