@@ -49,7 +49,7 @@ test('Should fetch all log entries before the endDate when there is no start dat
     expect(response.body.length).toEqual(3);
 });
 
-test('Should return 500 status if there is no params or the params are invalid', async () => {
+test('Should return 500 status if there are no params or if the params are invalid', async () => {
     const response = await request(app)
         .get(`/log`)
         .send()
